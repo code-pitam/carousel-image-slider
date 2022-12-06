@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/7217e92177.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        background-color: aqua;
+      }
+      .container {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 400px;
+        aspect-ratio: 16/9;
+        position: relative;
+        z-index: +1;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: white;
+        /* transition: 2s ease-in; */
+      }
+      .img-box {
+        display: flex;
+        width: 400px;
+        height: 100%;
+        transition: 0.4s ease-in;
+        position: absolute;
+        background-color: red;
+        overflow: hidden;
+      }
+      .img-box img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+      }
+      .left{
+        position: absolute;
+        background-color:white;
+        z-index: +100;
+        width: 50px;
+        aspect-ratio: 1/1;
+        background-color: rgba(240, 248, 255, 0.562);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        font-size: 30px;
+        font-weight: bolder;
+        top: 30%;
+        right: 0px;
+        border-radius: 50%;
+        
+      }
+      .right{
+        position: absolute;
+        background-color:white;
+        z-index: +100;
+        width: 50px;
+        font-size: 30px;
+        font-weight: bolder;
+        aspect-ratio: 1/1;
+        background-color: rgba(240, 248, 255, 0.562);
+        display: flex;
+        left: 0px;
+        top: 30%;
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-box"></div>
+      <div class="left"><i class="fa-solid fa-angle-right"></i></div>
+      <div class="right"><i class="fa-solid fa-angle-left"></i></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
