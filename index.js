@@ -9,6 +9,8 @@ let imglist = [
   "https://images.unsplash.com/photo-1660748054768-33282c43c318?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=977&q=80",
 ];
 
+// const obj = Object.assign({}, imglist)
+// console.log(obj);
 
 i = imglist.length;
 console.log(i);
@@ -35,26 +37,39 @@ left.addEventListener("click", () => {
     console.log(currentPosi);
     console.log(position);
     imgbox.style.left = `${position}px `;
-  } else if ((currentPosi = 3)) {
+  } else if (currentPosi = 3) {
     currentPosi = 0;
     imgbox.style.left = `${0}px `;
-  
+    // console.log('hi');
   }
+  // currentPosi++;
+  // console.log(currentPosi);
+  // imgbox.style.left = `${-400 * currentPosi}px `;
 
+  // currentPosi++;
+  // console.log(currentPosi);
+  // imgbox.style.left = `${-400 * currentPosi}px `;
 });
 
 right.addEventListener("click", () => {
+  // while(curr)
   currentPosi--;
   let position = -400 * currentPosi;
   console.log(currentPosi);
-  if (currentPosi == 0) {
+  if(currentPosi == 0){
+
     imgbox.style.left = `${0}px `;
-  } else if (currentPosi > 0 && currentPosi < i) {
+
+  }else if (currentPosi > 0 && currentPosi < i) {
     console.log(position);
     imgbox.style.left = `${position}px `;
-  } else if (currentPosi < 0) {
-    currentPosi = i;
+  } else if (currentPosi < 0  ) {
+    currentPosi = i-1;
     imgbox.style.left = `${currentPosi * -400}px `;
-    console.log("hi");
+
+    console.log(currentPosi);
+    
+    // imgbox.style.left = `${400 * i}px `;
+    console.log('hi');
   }
 });
